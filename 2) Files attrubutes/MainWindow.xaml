@@ -1,0 +1,53 @@
+﻿<Window x:Class="Files_attrubutes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Files_attrubutes"
+        mc:Ignorable="d"
+        Title="Атрибути файлів" Height="450" Width="800">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*"/>
+                <ColumnDefinition Width="0.45*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Проаналізувати" Command="{Binding AnalyzeCommand}" Margin="3" />
+            <Button Content="Порахувати суму чисел у файлах" Command="{Binding CalculateSumCommand}" Margin="3" Grid.Column="1" />
+        </Grid>
+        <Grid DockPanel.Dock="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.03*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.04*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.04*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.04*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Name="moviewidth1"></Border>
+                <Border Grid.Column="1" Name="moviewidth2"></Border>
+                <Border Grid.Column="2" Name="moviewidth3"></Border>
+                <Border Grid.Column="3" Name="moviewidth4"></Border>
+                <Border Grid.Column="4" Name="moviewidth5"></Border>
+            </Grid>
+            <ListView x:Name="tops" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="3" ItemsSource="{Binding Path=Files, UpdateSourceTrigger=PropertyChanged}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding PreviewCommand}" CommandParameter="{Binding SelectedItem, ElementName=tops}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Назва" DisplayMemberBinding="{Binding Name}" Width="{Binding ElementName=moviewidth1, Path=ActualWidth}" />
+                        <GridViewColumn Header="Шлях до файлу" DisplayMemberBinding="{Binding FullPath}" Width="{Binding ElementName=moviewidth2, Path=ActualWidth}" />
+                        <GridViewColumn Header="Розмір" DisplayMemberBinding="{Binding FileSize}" Width="{Binding ElementName=moviewidth3, Path=ActualWidth}" />
+                        <GridViewColumn Header="Створений" DisplayMemberBinding="{Binding CreateDate}" Width="{Binding ElementName=moviewidth4, Path=ActualWidth}" />
+                        <GridViewColumn Header="Сума чисел" DisplayMemberBinding="{Binding Sum}" Width="{Binding ElementName=moviewidth5, Path=ActualWidth}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </DockPanel>
+</Window>

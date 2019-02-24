@@ -1,0 +1,18 @@
+﻿<Window x:Class="Files_attrubutes.PreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Files_attrubutes"
+        mc:Ignorable="d"
+        Title="{Binding FileName, StringFormat='Перегляд файлу {0}'}" Height="450" Width="800">
+    <Grid>
+        <RichTextBox x:Name="richTextBox" Grid.Row="10" Grid.Column="1" Margin="3" VerticalScrollBarVisibility="Visible">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1) TextEditor", "SystemProgramming-Tasks\1) TextEditor.csproj", "{B91FC4D5-A21E-4CE1-AF83-969906AA944A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2) Files attrubutes", "2) Files attrubutes\2) Files attrubutes.csproj", "{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B91FC4D5-A21E-4CE1-AF83-969906AA944A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91FC4D5-A21E-4CE1-AF83-969906AA944A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91FC4D5-A21E-4CE1-AF83-969906AA944A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91FC4D5-A21E-4CE1-AF83-969906AA944A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59077BEC-63CF-427A-8F6F-828348212902}
+	EndGlobalSection
+EndGlobal
