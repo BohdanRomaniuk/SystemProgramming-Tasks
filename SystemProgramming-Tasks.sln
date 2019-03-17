@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1) TextEditor", "SystemProg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2) Files attrubutes", "2) Files attrubutes\2) Files attrubutes.csproj", "{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4) ASM Translator", "4) ASM Translator\4) ASM Translator.csproj", "{E3A0F312-3EA6-4BC3-A887-D8D9FA3F4131}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0733CBC9-BE32-4BD2-BB6D-D308D0EE4877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A0F312-3EA6-4BC3-A887-D8D9FA3F4131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A0F312-3EA6-4BC3-A887-D8D9FA3F4131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A0F312-3EA6-4BC3-A887-D8D9FA3F4131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A0F312-3EA6-4BC3-A887-D8D9FA3F4131}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

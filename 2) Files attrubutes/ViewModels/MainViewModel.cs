@@ -46,14 +46,14 @@ namespace Files_attrubutes.ViewModels
             previewWindow.Show();
         }
 
-        private void CalculateSum(object parameter)
+        private async void CalculateSum(object parameter)
         {
             foreach (var file in Files)
             {
                 using (var reader = new StreamReader(file.FullPath))
                 {
                     var sum = 0;
-                    var stringResult = reader.ReadToEnd();
+                    var stringResult = await reader.ReadToEndAsync();
                     var numbers = stringResult.Split(' ');
                     foreach (var num in numbers)
                     {
