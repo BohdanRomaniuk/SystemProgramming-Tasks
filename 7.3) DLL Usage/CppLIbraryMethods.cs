@@ -4,13 +4,13 @@ namespace DLLUsage
 {
     public class CppLibraryMethods : ILibraryMethod
     {
-        [DllImport("7.1) CPP DLL.dll")]
+        [DllImport("7.1) CPP DLL.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern void sayHelloTo(string name);
 
-        [DllImport("7.1) CPP DLL.dll")]
+        [DllImport("7.1) CPP DLL.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern double calculateHypotenuse(double a, double b);
 
-        [DllImport("7.1) CPP DLL.dll")]
+        [DllImport("7.1) CPP DLL.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern void solveSquareEquation(double a, double b, double c);
 
         public void SayHello(string name)
